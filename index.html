@@ -206,7 +206,7 @@
     <div id="quiz-screen" style="display: none;">
       <h1>Hogwarts Seçmen Şapka Seremonisi</h1>
       <div class="header-info">
-        <span id="student-display">Öğrenci: </span>
+        <span id="student-display">Aday: </span>
         <span id="progress-text">Soru: 1 / 7</span>
       </div>
       <div class="scenario-text" id="question-text">Sorular yükleniyor...</div>
@@ -292,7 +292,7 @@ function startCeremony() {
     return;
   }
   studentName = nameInput;
-  document.getElementById('student-display').innerText = `Öğrenci: ${studentName}`;
+  document.getElementById('student-display').innerText = `Aday: ${studentName}`;
 
   scores = { Gryffindor: 0, Ravenclaw: 0, Hufflepuff: 0, Slytherin: 0 };
   userAnswers = [];
