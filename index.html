@@ -11,7 +11,7 @@
       color: #3b2713;
       font-family: 'Georgia', serif;
       margin: 0;
-      padding: 40px 20px 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -19,55 +19,55 @@
       min-height: 100vh;
     }
     
-    /* Ana Kart / Parşömen Kapsayıcısı */
-    .wrapper {
-      position: relative;
-      max-width: 680px;
+    /* Dış Kapsayıcı */
+    .ceremony-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 650px;
       width: 100%;
-      margin-top: 100px; /* Büyük şapka için üstten pay */
     }
 
-    /* Sarı Alanın Üstüne Binen Dev Şapka */
-    .floating-hat {
-      position: absolute;
-      top: -125px; /* Sarı kutunun üstüne taşırır */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 240px; /* Çok daha büyük ve görkemli */
+    /* SARI KUTUNUN TAMAMEN DIŞINDA VE ÜSTÜNDE DURAN BÜYÜK ŞAPKA */
+    .top-hat-img {
+      width: 300px; /* Büyük ve heybetli */
+      max-width: 85%;
       height: auto;
-      z-index: 10;
-      mix-blend-mode: multiply; /* Damalı arka planı yok edip deriyi parşömene kaynaştırır */
-      filter: drop-shadow(0 15px 20px rgba(0,0,0,0.6));
+      display: block;
+      margin: 0 auto -20px auto; /* Sarı kutuya hafifçe dokunur ama içine girmez */
+      z-index: 5;
+      filter: drop-shadow(0 15px 15px rgba(0,0,0,0.8));
       pointer-events: none;
     }
 
+    /* SARI PARŞÖMEN ALANI (HİÇ BOZULMAYAN SAF KUTU) */
     .parchment {
       background: #f4ecd8;
       border: 3px double #7c5835;
-      box-shadow: 0 0 25px rgba(0,0,0,0.8), inset 0 0 40px rgba(160,120,70,0.25);
+      box-shadow: 0 0 30px rgba(0,0,0,0.9), inset 0 0 40px rgba(160,120,70,0.25);
       border-radius: 12px;
       width: 100%;
-      padding: 100px 35px 35px; /* Şapkanın altında kalan üst kısım için boşluk */
-      position: relative;
+      padding: 35px 30px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
-      font-size: 27px;
+      font-size: 26px;
       color: #4a2810;
-      margin-top: 0;
+      margin-top: 5px;
       border-bottom: 2px dashed #ab8965;
       padding-bottom: 12px;
       letter-spacing: 1px;
     }
 
     .crest-img {
-      width: 150px;
+      width: 140px;
       height: auto;
-      margin: 10px auto;
+      margin: 15px auto;
       display: block;
-      mix-blend-mode: multiply;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
     }
 
     .input-group { margin: 25px 0; }
@@ -98,7 +98,7 @@
     }
     .main-btn:hover { background: #2b1506; }
 
-    /* Soru Ekranı Ayarları */
+    /* Soru Ekranı */
     .header-info {
       display: flex;
       justify-content: space-between;
@@ -191,7 +191,7 @@
       color: #d1c2a5;
       padding: 20px;
       border-radius: 8px;
-      max-width: 680px;
+      max-width: 650px;
       width: 100%;
       font-family: monospace;
       font-size: 12px;
@@ -208,17 +208,18 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="ceremony-container">
 
-  <!-- SARI ALANIN ÜSTÜNDEN TAŞAN BÜYÜK ŞAPKA -->
-  <img id="top-floating-hat" src="sapka.png" alt="Seçmen Şapka" class="floating-hat" onerror="this.style.display='none'">
+  <!-- SARI KUTUNUN DIŞINDA, ÜSTÜNDE DURAN BÜYÜK ŞAPKA -->
+  <img id="top-sorting-hat" src="sapka.png" alt="Seçmen Şapka" class="top-hat-img" onerror="this.style.display='none'">
 
+  <!-- SARI PARŞÖMEN ALANI -->
   <div class="parchment">
 
     <!-- 1. GİRİŞ EKRANI -->
     <div id="welcome-screen">
       <h1>Hogwarts Seçmen Şapka Töreni</h1>
-      <p>Büyük Salon'a hoş geldin genç büyücü. Şapka zihnini tartmadan önce adını bilmeli...</p>
+      <p style="margin-top: 15px;">Büyük Salon'a hoş geldin genç büyücü. Şapka zihnini tartmadan önce adını bilmeli...</p>
       <div class="input-group">
         <input type="text" id="student-name" placeholder="Adınızı yazın..." autocomplete="off">
       </div>
@@ -263,7 +264,7 @@
   </div>
 </div>
 
-<!-- GİZLİ YÖNETİCİ KONSOLU -->
+<!-- GİZLİ YÖNETİCİ KONSOLU (?yonetici=1 veya Ctrl+Shift+A) -->
 <div id="admin-panel">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
     <strong>📜 SESSİZ VERİ ARŞİVİ (YÖNETİCİ GÖRÜNÜMÜ)</strong>
@@ -433,8 +434,8 @@ function showFinalResults() {
   document.getElementById('analyzing-screen').style.display = 'none';
   document.getElementById('result-screen').style.display = 'block';
 
-  // Sonuç ekranında tepe şapkayı gizleyip bina armasını öne çıkar
-  document.getElementById('top-floating-hat').style.display = 'none';
+  // Sonuç ekranında tepe şapkayı gizleyip arma göster
+  document.getElementById('top-sorting-hat').style.display = 'none';
 
   const data = houseData[finalWinnerHouse];
   const crestEl = document.getElementById('house-crest');
@@ -541,7 +542,7 @@ function clearAdminData() {
 
 function restartAll() {
   document.getElementById('student-name').value = '';
-  document.getElementById('top-floating-hat').style.display = 'block';
+  document.getElementById('top-sorting-hat').style.display = 'block';
   document.getElementById('result-screen').style.display = 'none';
   document.getElementById('welcome-screen').style.display = 'block';
 }
