@@ -27,7 +27,7 @@
       width: 100%;
     }
 
-    /* SARI KUTUNUN TAMAMEN DIŞINDA VE ÜSTÜNDE DURAN BÜYÜK ŞAPKA */
+    /* Sarı kutunun dışındaki şapka */
     .top-hat-img {
       width: 300px;
       max-width: 85%;
@@ -39,7 +39,7 @@
       pointer-events: none;
     }
 
-    /* SARI PARŞÖMEN ALANI */
+    /* Sarı parşömen alanı */
     .parchment {
       background: #f4ecd8;
       border: 3px double #7c5835;
@@ -180,29 +180,6 @@
       text-align: left;
     }
     .analysis-section p { margin: 8px 0; }
-
-    /* Gizli Yönetici Konsolu Paneli */
-    #admin-panel {
-      display: none;
-      margin-top: 25px;
-      background: #1c1815;
-      border: 1px solid #7c5835;
-      color: #d1c2a5;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 650px;
-      width: 100%;
-      font-family: monospace;
-      font-size: 12px;
-      text-align: left;
-      max-height: 420px;
-      overflow-y: auto;
-    }
-    .admin-entry {
-      border-bottom: 1px dashed #55412e;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
@@ -261,18 +238,6 @@
     </div>
 
   </div>
-</div>
-
-<!-- GİZLİ YÖNETİCİ KONSOLU (?yonetici=1 veya Ctrl+Shift+A) -->
-<div id="admin-panel">
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-    <strong>📜 SESSİZ VERİ ARŞİVİ (YÖNETİCİ GÖRÜNÜMÜ)</strong>
-    <div>
-      <button onclick="clearAdminData()" style="background:#5c2424; color:#fff; border:none; padding:4px 8px; cursor:pointer; margin-right:6px;">Verileri Sıfırla</button>
-      <button onclick="document.getElementById('admin-panel').style.display='none'" style="background:#444; color:#fff; border:none; padding:4px 8px; cursor:pointer;">Kapat</button>
-    </div>
-  </div>
-  <div id="admin-records-list">Kayıtlı öğrenci bulunmuyor.</div>
 </div>
 
 <script>
@@ -458,7 +423,7 @@ function showFinalResults() {
   `;
 }
 
-// SESSİZCE HEM GOOGLE SHEETS'E HEM LOCALSTORAGE'A KAYDEDEN FONKSİYON
+// Sonuçları sessizce Google E-Tablo'ya ileten fonksiyon
 function saveRecordSilently() {
   const newRecord = {
     id: Date.now(),
@@ -475,7 +440,6 @@ function saveRecordSilently() {
     customProfile: personalizedProfileText.replace(/<[^>]*>?/gm, ' ')
   };
 
-  // 1. Google Sheets Webhook'una Arka Planda Sessizce Gönder
   try {
     fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
@@ -484,73 +448,7 @@ function saveRecordSilently() {
       body: JSON.stringify(newRecord)
     });
   } catch (err) {
-    console.error("Google Sheets'e yazılamadı:", err);
-  }
-
-  // 2. Tarayıcı İçi Gizli Konsolda da Yedeğini Tut
-  let records = JSON.parse(localStorage.getItem('Hogwarts_Records') || '[]');
-  records.push(newRecord);
-  localStorage.setItem('Hogwarts_Records', JSON.stringify(records));
-}
-
-function checkAdminAccess() {
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('yonetici') === '1' || urlParams.get('admin') === '1') {
-    toggleAdminPanel();
-  }
-}
-
-function toggleAdminPanel() {
-  const panel = document.getElementById('admin-panel');
-  if (panel.style.display === 'block') {
-    panel.style.display = 'none';
-  } else {
-    renderAdminRecords();
-    panel.style.display = 'block';
-    panel.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-window.addEventListener('keydown', (e) => {
-  if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
-    e.preventDefault();
-    toggleAdminPanel();
-  }
-});
-
-function renderAdminRecords() {
-  const container = document.getElementById('admin-records-list');
-  const records = JSON.parse(localStorage.getItem('Hogwarts_Records') || '[]');
-
-  if (records.length === 0) {
-    container.innerHTML = "<em>Henüz kayıtlı bir seremoni verisi bulunmuyor.</em>";
-    return;
-  }
-
-  let html = '';
-  records.forEach((rec, idx) => {
-    html += `
-      <div class="admin-entry">
-        <strong>#${idx + 1} | Öğrenci: ${rec.student}</strong> (${rec.date})<br>
-        <strong>Kule:</strong> ${rec.winnerHouse} | [G:%${rec.percentages.Gryffindor} R:%${rec.percentages.Ravenclaw} H:%${rec.percentages.Hufflepuff} S:%${rec.percentages.Slytherin}]<br>
-        <details style="margin-top:5px; cursor:pointer;">
-          <summary>Verdiği Cevapları ve Özel Raporu Gör</summary>
-          <div style="background:#26211c; padding:8px; margin-top:5px; border-radius:4px;">
-            <strong>Profil Özeti:</strong> ${rec.customProfile}<br><br>
-            <strong>Verilen Yanıtlar:</strong><br>
-            ${rec.answers.map((a, i) => `[S${i+1}] ${a.question}<br>↳ Yanıt: ${a.answer} (${a.house})`).join('<br><br>')}
-          </div>
-        </details>
-      </div>
-    `;
-  });
-  container.innerHTML = html;
-}
-
-function clearAdminData() {
-  if (confirm("Tüm kayıtlı öğrenci verileri silinsin mi?")) {
-    localStorage.removeItem('Hogwarts_Records');
-    renderAdminRecords();
+    console.error("Google Sheets'e gönderilemedi:", err);
   }
 }
 
@@ -560,8 +458,6 @@ function restartAll() {
   document.getElementById('result-screen').style.display = 'none';
   document.getElementById('welcome-screen').style.display = 'block';
 }
-
-checkAdminAccess();
 </script>
 
 </body>
