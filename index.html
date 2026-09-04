@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts Seçmen Şapka Töreni</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      background-color: #12100e;
+      color: #3b2713;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .parchment {
+      background: #f4ecd8;
+      border: 3px double #7c5835;
+      box-shadow: 0 0 25px rgba(0,0,0,0.8), inset 0 0 40px rgba(160,120,70,0.25);
+      border-radius: 12px;
+      max-width: 700px;
+      width: 100%;
+      padding: 35px 30px;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      color: #4a2810;
+      margin-top: 0;
+      border-bottom: 2px dashed #ab8965;
+      padding-bottom: 12px;
+      letter-spacing: 1px;
+    }
+    .header-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #7c5835;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .scenario-text {
+      font-size: 17px;
+      line-height: 1.55;
+      min-height: 65px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .option-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: #dfcfb2;
+      border: 2px solid #9c7a52;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      font-family: 'Georgia', serif;
+      color: #2b1808;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .option-btn:hover {
+      background: #cbb48f;
+      border-color: #5c3c1e;
+      transform: translateX(4px);
+    }
+    #result-box {
+      display: none;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    .house-title {
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+    .house-motto {
+      text-align: center;
+      font-style: italic;
+      color: #6a4f32;
+      margin-bottom: 25px;
+    }
+    .scores-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0;
+      background: rgba(255,255,255,0.45);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .score-item {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .analysis-section {
+      background: #ebdcc0;
+      border-left: 4px solid #7c5835;
+      padding: 15px;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .restart-btn {
+      display: block;
+      margin: 25px auto 0;
+      padding: 10px 24px;
+      background: #4a2810;
+      color: #f4ecd8;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .restart-btn:hover { background: #2f1706; }
+    .loading-msg {
+      text-align: center;
+      font-style: italic;
+      padding: 20px;
+      font-size: 16px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="parchment">
+  <div id="quiz-box">
+    <h1>Hogwarts Seçmen Şapka Seremonisi</h1>
+    <div class="header-info">
+      <span id="pool-info">Havuz: Yükleniyor...</span>
+      <span id="progress-text">Soru: 1 / 7</span>
+    </div>
+    <div class="scenario-text" id="question-text">
+      <div class="loading-msg">Kadim büyü parşömenleri yükleniyor...</div>
+    </div>
+    <div id="options-container"></div>
+  </div>
+
+  <div id="result-box">
+    <h1>Seçmen Şapka Kararını Verdi!</h1>
+    <div class="house-title" id="final-house"></div>
+    <div class="house-motto" id="house-motto"></div>
+
+    <div class="scores-grid" id="scores-display"></div>
+
+    <div class="analysis-section">
+      <strong>Karakter ve Karar Alma Profili:</strong>
+      <p id="analysis-text" style="margin: 8px 0 0;"></p>
+    </div>
+
+    <button class="restart-btn" onclick="startQuiz()">Töreni Yeniden Başlat</button>
+  </div>
+</div>
+
+<script>
+let allQuestionsPool = [];
+let selectedQuestions = [];
+let currentQuestionIndex = 0;
+let scores = { Gryffindor: 0, Ravenclaw: 0, Hufflepuff: 0, Slytherin: 0 };
+
+// questions.json dosyasından 500 soruyu çekme
+async function loadQuestions() {
+  try {
+    const response = await fetch('questions.json');
+    if (!response.ok) throw new Error('Dosya yüklenemedi');
+    allQuestionsPool = await response.json();
+    document.getElementById('pool-info').innerText = `Havuz: ${allQuestionsPool.length} Soru`;
+    startQuiz();
+  } catch (err) {
+    document.getElementById('question-text').innerHTML = `
+      <div style="color: #a02020; font-size: 14px;">
+        <strong>Hata:</strong> <code>questions.json</code> dosyası okunamadı.<br><br>
+        <em>Tarayıcı güvenlik kısıtı (CORS):</em> Eğer dosyayı çift tıklayarak (file://) açtıysanız, tarayıcı harici JSON okumayı engelleyebilir. Klasörün içinde bir terminal açıp <code>python -m http.server 8000</code> yazarak <code>http://localhost:8000</code> adresinden açabilir veya VS Code Live Server eklentisini kullanabilirsiniz.
+      </div>
+    `;
+  }
+}
+
+function startQuiz() {
+  if (allQuestionsPool.length === 0) return;
+
+  scores = { Gryffindor: 0, Ravenclaw: 0, Hufflepuff: 0, Slytherin: 0 };
+  currentQuestionIndex = 0;
+
+  // 500 soruluk havuzdan rastgele 7 tanesini seç
+  const shuffled = [...allQuestionsPool].sort(() => 0.5 - Math.random());
+  selectedQuestions = shuffled.slice(0, 7);
+
+  document.getElementById('quiz-box').style.display = 'block';
+  document.getElementById('result-box').style.display = 'none';
+
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const currentQ = selectedQuestions[currentQuestionIndex];
+  document.getElementById('progress-text').innerText = `Soru: ${currentQuestionIndex + 1} / 7`;
+  document.getElementById('question-text').innerText = currentQ.q;
+
+  const optionsContainer = document.getElementById('options-container');
+  optionsContainer.innerHTML = '';
+
+  // Seçenekleri de kendi içinde karıştır
+  const shuffledOptions = [...currentQ.options].sort(() => 0.5 - Math.random());
+
+  shuffledOptions.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerText = opt.text;
+    btn.onclick = () => selectOption(opt.house);
+    optionsContainer.appendChild(btn);
+  });
+}
+
+function selectOption(house) {
+  scores[house]++;
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < 7) {
+    renderQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById('quiz-box').style.display = 'none';
+  document.getElementById('result-box').style.display = 'block';
+
+  let winnerHouse = Object.keys(scores).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+
+  const houseData = {
+    Gryffindor: {
+      color: "#740001",
+      motto: "Cesaret, yiğitlik ve kararlılık erdemleriyle dolu yürekler!",
+      analysis: "Kriz anlarında sorumluluk almaktan çekinmeyen, içgüdüleriyle cesurca adım atan doğal bir öncüsün. Doğru olanı savunmak senin için güvenli limanda beklemekten çok daha önemli."
+    },
+    Ravenclaw: {
+      color: "#0e1a40",
+      motto: "Akıl, sınır tanımayan en büyük hazinedir.",
+      analysis: "Problemleri sezgilerle değil; mantık, gözlem ve analitik stratejilerle çözüyorsun. Bilgiye ve olayların arkasındaki neden-sonuç ilişkisine büyük değer veriyorsun."
+    },
+    Hufflepuff: {
+      color: "#c28f00",
+      motto: "Adalet, sabır, vefakarlık ve tükenmeyen emek.",
+      analysis: "Bireysel zaferlerden çok ekip ruhuna, güvene ve adalete değer veriyorsun. Zor anlarda sevdiklerine siper olan yüksek empatin en güçlü kalkanın."
+    },
+    Slytherin: {
+      color: "#1a472a",
+      motto: "Büyük hedeflere giden yolda pratik zeka ve kurnaz strateji.",
+      analysis: "Hedef odaklı, şartlara hızla uyum sağlayabilen ve kriz anlarını avantaja çevirmeyi bilen pratik bir zekaya sahipsin. Planlı hareket etmek senin en büyük gücün."
+    }
+  };
+
+  const houseEl = document.getElementById('final-house');
+  houseEl.innerText = winnerHouse.toUpperCase();
+  houseEl.style.color = houseData[winnerHouse].color;
+
+  document.getElementById('house-motto').innerText = houseData[winnerHouse].motto;
+  document.getElementById('analysis-text').innerText = houseData[winnerHouse].analysis;
+
+  const scoresDisplay = document.getElementById('scores-display');
+  scoresDisplay.innerHTML = `
+    <div class="score-item">🦁 Gryffindor: %${Math.round((scores.Gryffindor/7)*100)}</div>
+    <div class="score-item">🦅 Ravenclaw: %${Math.round((scores.Ravenclaw/7)*100)}</div>
+    <div class="score-item">🦡 Hufflepuff: %${Math.round((scores.Hufflepuff/7)*100)}</div>
+    <div class="score-item">🐍 Slytherin: %${Math.round((scores.Slytherin/7)*100)}</div>
+  `;
+}
+
+// Sayfa açıldığında JSON'ı yükle
+loadQuestions();
+</script>
+
+</body>
+</html>
