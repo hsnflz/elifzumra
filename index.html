@@ -176,7 +176,6 @@ async function loadQuestions() {
     const response = await fetch('questions.json');
     if (!response.ok) throw new Error('Dosya yüklenemedi');
     allQuestionsPool = await response.json();
-    document.getElementById('pool-info').innerText = `Havuz: ${allQuestionsPool.length} Soru`;
     startQuiz();
   } catch (err) {
     document.getElementById('question-text').innerHTML = `
