@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "q": "Flitwick'in dersinde sınıftan kaçan ve koridorda hızla süzülen sihirli uçan anahtarlardan doğru olanı yakalamanız gerekiyor. Arkadaşların çaresizce bakıyor. İlk hamlen ne olur?",
+    "options": [
+      { "text": "Hemen süpürgeme atlar, tehlikeli dalışları göze alarak kanatları hırpalanmış anahtarın peşinden hızla dalarım.", "house": "Gryffindor" },
+      { "text": "Kapı kilidinin aşınma izlerini inceler, anahtarların uçuş aerodinamiğini çözüp tam geçeceği rotada pusu kurarım.", "house": "Ravenclaw" },
+      { "text": "Arkadaşlarımla koridoru bölüşür, herkesin bir alanı kapatmasını sağlayarak anahtarı köşeye sıkıştırırım.", "house": "Hufflepuff" },
+      { "text": "En iyi uçan arkadaşımı anahtarı kovalaması için öne sürer, yorulduğu anda son hamleyi ben yaparak övgüyü alırım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 2,
+    "q": "Hogwarts Ekspresi'nde kompartımanın ışıkları aniden söndü, camlar buz tuttu ve içeri bir Ruh Emici süzüldü. Ne yaparsın?",
+    "options": [
+      { "text": "Ruh Emicilerin neyle beslendiğini ve zayıflıklarını hatırlayıp zihnimde en saf mutlu anıyı formüle ederim.", "house": "Ravenclaw" },
+      { "text": "Korkudan donakalan küçük sınıftaki öğrencileri arkama çekip cübbemle onları sarar, sakinleştirmeye çalışırım.", "house": "Hufflepuff" },
+      { "text": "Asamı çekip canavarın tam önüne dikilir, gücüm yettiğince 'Expecto Patronum' diye haykırırım.", "house": "Gryffindor" },
+      { "text": "Soğukkanlılığımı koruyarak gölgelere çekilir, yaratığın ilk kimi hedef alacağını tartıp kendimi koruma altına alırım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 3,
+    "q": "Yasak Orman'da Aragog'un yuvasına yakın bir yerde dev örümcekler tarafından etrafınız sarıldı. Ne yaparsın?",
+    "options": [
+      { "text": "Ateş büyüsüyle örümceklerin liderinin üzerine yürür, grubumun kaçabilmesi için dikkatleri üstüme çekerim.", "house": "Gryffindor" },
+      { "text": "Örümceklerin sürü hiyerarşisini ve en güçlü bireyin zaafını tespit edip bir sonraki hamlelerini öngörmeye çalışırım.", "house": "Ravenclaw" },
+      { "text": "Örümceklerle konuşma taklidi yaparak veya yanımızdaki değerli bir büyü nesnesini feda ederek bir pazarlık yolu ararım.", "house": "Slytherin" },
+      { "text": "Gruptan kimsenin arkada kalmaması için arkadaşlarımın koluna girer, hep birlikte savunma çemberi kurarız.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 4,
+    "q": "Koridorda Filch'ten saklanırken yerde Çapulcu Haritası'na benzer sihirli ve parıldayan bir parşömen buldun. Ne yaparsın?",
+    "options": [
+      { "text": "Haritayı kullanarak okulun tüm gizli geçitlerini ve profesörlerin hareketlerini kontrol edip büyük bir koz edinirim.", "house": "Slytherin" },
+      { "text": "Eşyayı sahibine ulaştırmak veya okulda bir kural ihlali yaratmaması için dürüstçe bir öğretmene teslim ederim.", "house": "Hufflepuff" },
+      { "text": "Haritanın nasıl bir büyüyle çalıştığını, mürekkebin hangi antik prensiple hareket ettiğini çözmek için odama götürürüm.", "house": "Ravenclaw" },
+      { "text": "Yasak saatlerde şatodaki tehlikeli gizemleri keşfetmek ve yasak koridorlara cesurca inmek için haritayı kullanırım.", "house": "Gryffindor" }
+    ]
+  },
+  {
+    "id": 5,
+    "q": "McGonagall'ın dev Büyücü Satrancı tahtasında son kareye geldiniz. Kapıyı açmak için bir taşın kendini feda etmesi gerekiyor. Kararın?",
+    "options": [
+      { "text": "Arkadaşımın fedakarlık yapmasına asla izin vermem; vezirin önüne kendi taşımı sürüp darbeyi ben alırım.", "house": "Gryffindor" },
+      { "text": "Satranç teorisinin tüm hamle varyasyonlarını saniyeler içinde hesaplayıp en az hasarlı mantıksal kaybı belirlerim.", "house": "Ravenclaw" },
+      { "text": "Birlikte kazanmak için tüm takımın ortak rızasını alır, darbeyi hafifletecek ortak bir kalkan büyüsü denerim.", "house": "Hufflepuff" },
+      { "text": "Büyük amaca ulaşmak için en az yararlı olan piyonu soğukkanlılıkla feda edip şah-matı garantiye alırım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 6,
+    "q": "Karanlık Sanatlara Karşı Savunma dersinde bir Böcürt ile karşılaştın. Dolaptan çıkan şey seni en derin korkunla yüzleştirdi. Ne yaparsın?",
+    "options": [
+      { "text": "Korkumun bana hissettirdiği acizliği kabul etmem; zihnimde onu hemen kontrol edebileceğim bir güce çeviririm.", "house": "Slytherin" },
+      { "text": "Gözümü kırpmadan korkumun üstüne yürür, sesimi yükselterek cesaretle 'Riddikulus!' büyüsünü savururum.", "house": "Gryffindor" },
+      { "text": "Böcürtün optik yanılsama ilkelerini hatırlar, korkunun mantıksız temellerini analiz edip gülünç hale getiririm.", "house": "Ravenclaw" },
+      { "text": "Arkadaşlarımdan güç alırım; yalnız olmadığımı ve sevdiklerimin yanımda olduğunu bilmek bana cesaret verir.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 7,
+    "q": "Üçbüyücü Turnuvası'nda Kara Göl görevindesin. Görev rehineni kurtarmak ama yanındaki başka bir rehinenin kurtarıcısı gelmedi. Ne yaparsın?",
+    "options": [
+      { "text": "Sadece kendi rehine mi değil, geride kalan diğer rehineyi de kurtarmak için turnuvayı kaybetme pahasına ileri atılırım.", "house": "Gryffindor" },
+      { "text": "Göl kurallarını ve turnuva puanlama kriterlerini hatırlar, zaman sınırını aşmadan her iki rehineyi kurtaracak formülü hesaplarım.", "house": "Ravenclaw" },
+      { "text": "Diğer rehinenin yalnız kalmasına vicdanım elvermez; kendi canımı tehlikeye atıp onu da su yüzüne çıkarırım.", "house": "Hufflepuff" },
+      { "text": "Görevin bir test olduğunu ve rehinelerin güvende olduğunu bilerek kendi hedefime odaklanır, turnuvayı kazanmayı seçerim.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 8,
+    "q": "Snape'in İksir dersinde 'Yaşayan Ölüm Demeti' hazırlıyorsun. Kitaptaki talimatlar kafa karıştırıcı. Ne yaparsın?",
+    "options": [
+      { "text": "Kitaptaki kimyasal prensipleri adım adım çözer, doğru kıvamı bulmak için mantıksal bir sıra takip ederim.", "house": "Ravenclaw" },
+      { "text": "Kitabın dışına çıkıp içgüdülerimle hareket eder, sonucun getireceği riski göze alarak cesur bir karışım yaparım.", "house": "Gryffindor" },
+      { "text": "En yüksek notu ve Felix Felicis ödülünü kapmak için Melez Prens tarzı kestirme ve kurnaz yöntemleri uygularım.", "house": "Slytherin" },
+      { "text": "Bıkmadan, usanmadan malzemeleri doğru ezmek için saatlerce emek verir, sıramı arkadaşlarımla adilce paylaşırım.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 9,
+    "q": "Esrar Dairesi'ndeki Kehanet Küresi salonunda Ölüm Yiyenler tarafından kıstırıldınız. Küreyi istiyorlar. Hamlen?",
+    "options": [
+      { "text": "Küreyi vermemek için düşmanın en güçlüsünün gözlerinin içine bakar, ilk laneti cesurca ben fırlatırım.", "house": "Gryffindor" },
+      { "text": "Küreyi bir koz olarak elimde tutar, karşı tarafla pazarlık yaparak kendi grubumu oradan tek parça çıkarmaya çalışırım.", "house": "Slytherin" },
+      { "text": "Odadaki rafların yerçekimi ve devrilme açılarını hesaplar, 'Reducto' ile tüm rafları düşmanın üzerine yıkarım.", "house": "Ravenclaw" },
+      { "text": "Yaralanan arkadaşımı kalkanımın altına alır, herkes kaçana kadar savunma büyüsünü asla bozmam.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 10,
+    "q": "Hogsmeade'e gizlice gitmek için tek gözlü cadı heykelinin arkasındaki gizli geçidi keşfettin. Ancak bir öğrenci seni gördü. Ne yaparsın?",
+    "options": [
+      { "text": "Durumu inkâr etmem; gördüyse gördü der, gerekirse ceza almayı göze alarak başım dik dururum.", "house": "Gryffindor" },
+      { "text": "Onu da tünelden gelmeye davet eder, bu tatlı sırrı birlikte paylaşarak bir dostluk bağı kurarım.", "house": "Hufflepuff" },
+      { "text": "Öğrencinin zaaflarını tartar, bu sırrı saklaması karşılığında ona reddedemeyeceği bir teklif sunarım.", "house": "Slytherin" },
+      { "text": "Heykelin tarihi geçmişini ve kalenin mimarisini anlatarak dikkatini dağıtır, konuyu kurallar çerçevesinde kapatırım.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 11,
+    "q": "Görünmezlik Pelerini sende. Okulda kimsenin bilmediği bir tehlikeyi çözmek için bir gecen var. Ne yaparsın?",
+    "options": [
+      { "text": "Kütüphanenin Yasak Bölümü'ne sızıp tehlikeye neden olan antik büyünün kökenlerini ve tezlerini araştırırım.", "house": "Ravenclaw" },
+      { "text": "Doğrudan tehlikenin kalbine, zindanlara veya ormana iner, karanlıkla tek başıma yüzleşirim.", "house": "Gryffindor" },
+      { "text": "Okuldaki nüfuzlu kişilerin veya öğretmenlerin ne bildiğini öğrenmek için kapı arkalarını dinleyip istihbarat toplarım.", "house": "Slytherin" },
+      { "text": "Pelerini arkadaşlarımla paylaşarak ortaklaşa nöbet tutar, tehlike anında herkesi uyarmaya çalışırım.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 12,
+    "q": "Bitkibilim dersinde ölümcül çığlık atan bebek Adamotu'nu (Mandrake) saksıya geçirirken bir arkadaşının kulaklığı düştü. Ne yaparsın?",
+    "options": [
+      { "text": "Kendi kulaklığımı hızla çıkarıp onun kulağına takar, bayılma riskini kendi üstüme alırım.", "house": "Hufflepuff" },
+      { "text": "Adamotunu saniyeler içinde toprağa gömmek için çıplak ellerimle kökü kavrar ve deli gibi bastırırım.", "house": "Gryffindor" },
+      { "text": "Asamla hızlı bir 'Silencio' büyüsü fırlatıp adamotunun frekansını keserek durumu çözerim.", "house": "Ravenclaw" },
+      { "text": "Profesörün dikkatini oraya çeker, olaya doğrudan karışmadan arkadaşımın yardım almasını sağlarım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 13,
+    "q": "Kelid Aynası'nın (Mirror of Erised) karşısındasın. Aynada sana bakan yansıma en çok neye sahip olduğunda parıldıyor?",
+    "options": [
+      { "text": "Sihir dünyasının bilinen tüm gizemlerini çözmüş, adını en bilge büyücüler listesine yazdırmış halim.", "house": "Ravenclaw" },
+      { "text": "Tüm sevdiklerimin, ailemin ve arkadaşlarımın bir arada, huzur ve güven içinde güldüğü bir ortam.", "house": "Hufflepuff" },
+      { "text": "Karanlık bir istilayı durdurmuş, Hogwarts'ı tek başına kurtarmış ve herkesin hayran olduğu bir kahraman.", "house": "Gryffindor" },
+      { "text": "Bakanlık ve tüm sihir dünyası üzerinde tartışmasız bir otoriteye ve büyük bir güce sahip olduğum bir liderlik.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 14,
+    "q": "Quidditch seçmelerinde en yakın dostunla aynı mevki (Arayıcı) için yarışıyorsun. Sadece bir kişi takıma girecek. Yaklaşımın?",
+    "options": [
+      { "text": "Saha psikolojisini ve rakibimin zaaflarını iyi kullanır, takıma girmek için tüm stratejik yeteneklerimi sergilerim.", "house": "Slytherin" },
+      { "text": "Son nefesime kadar tüm cesaretimle uçar, mertçe mücadele eder, kazanan kim olursa olsun dostuma sarılırım.", "house": "Gryffindor" },
+      { "text": "Dostumun kazanması beni en az kendi başarım kadar mutlu eder; kim takıma daha çok katkı sağlayacaksa o seçilsin isterim.", "house": "Hufflepuff" },
+      { "text": "Süpürgenin hızını, rüzgar sürtünmesini ve dönüş açılarını en verimli hale getirecek tekniği mükemmelleştiririm.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 15,
+    "q": "Şeytan Tuzağı (Devil's Snare) bitkisi seni ve arkadaşlarını aşağı çekerken boğmak üzere sıkıyor. Ne yaparsın?",
+    "options": [
+      { "text": "Bitkinin aydınlık ve sıcaktan nefret ettiğini anında hatırlar, sakin kalıp doğru 'Lumos Solem' büyüsünü yaparım.", "house": "Ravenclaw" },
+      { "text": "Panik yapıp çırpınan arkadaşlarımı tutar, gevşemelerini sağlayarak hepimizin kurtulması için sakinleştiririm.", "house": "Hufflepuff" },
+      { "text": "Kollarım kilitlense bile asamı zorla çevirir, alev büyüsüyle sarmaşıklara karşı cesurca savaşırım.", "house": "Gryffindor" },
+      { "text": "En az sıkışan noktayı bulup kendimi kurtarır, ardından yukarıdan güvenli bir şekilde diğerlerini kurtarma planı yaparım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 16,
+    "q": "Bina Kupası için son hafta. Rakip binanın haksız bir yöntemle puan kazandığını öğrendin ama kanıt yok. Ne yaparsın?",
+    "options": [
+      { "text": "Onların oyununu kendi kuralıyla oynar; daha zekice bir hamleyle puan farkını kapatıp kupayı alırım.", "house": "Slytherin" },
+      { "text": "Doğrudan onların ortak salon kapısına gider, haksızlıklarını tüm okulun önünde yüzlerine çarparım.", "house": "Gryffindor" },
+      { "text": "Öğretmenlere gitmek yerine kendi binamdaki arkadaşlarımla kenetlenir, dürüst ve temiz puanlarla farkı kapatmaya çalışırım.", "house": "Hufflepuff" },
+      { "text": "Kanıt toplamak için arşivleri ve nöbetçi defterlerini inceler, durumu somut mantık ve delillerle belgelerim.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 17,
+    "q": "Karanlık bir büyücü tarafından lanetlenmiş antik bir kolye buldun. Takan kişiye büyük büyü gücü veriyor ama ruhunu yıpratıyor. Ne yaparsın?",
+    "options": [
+      { "text": "Lanetin formülünü inceleyip zihinsel bariyerlerle yan etkilerini izole ederek o gücü kendi lehime kullanmayı denerim.", "house": "Slytherin" },
+      { "text": "Hiç tereddüt etmeden kolyeyi asil bir büyüyle veya Gryffindor Kılıcı gibi güçlü bir nesneyle anında yok ederim.", "house": "Gryffindor" },
+      { "text": "Kimsenin eline geçip zehirlenmemesi için güvenli bir kutuya koyar, doğrudan okul yönetimine teslim ederim.", "house": "Hufflepuff" },
+      { "text": "Lanetin mekanizmasını ve ruhla olan bağını güvenli bir mesafeden parşömenlere not ederek araştırırım.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 18,
+    "q": "İhtiyaç Odası'na (Room of Requirement) girdiğinde oda tam olarak senin ihtiyacına göre şekilleniyor. Kapı açıldığında içeride ne bulmak istersin?",
+    "options": [
+      { "text": "Dışarıdaki baskılardan uzak, arkadaşlarımla güvenle oturup sıcacık çay içebileceğimiz rahat bir sığınak.", "house": "Hufflepuff" },
+      { "text": "Dünyadaki tüm dillerde yazılmış, kayıp büyü el yazmalarının bulunduğu sonsuz bir kütüphane ve çalışma masası.", "house": "Ravenclaw" },
+      { "text": "Her türlü canavarla ve büyücüyle dövüş tekniklerimi geliştirebileceğim zorlu ve tehlikeli bir antrenman arenası.", "house": "Gryffindor" },
+      { "text": "Okulun tüm gizli yollarını, düşmanlarımın planlarını ve bana üstünlük sağlayacak nadir nesneleri barındıran bir karargah.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 19,
+    "q": "Dumbledore'un Ordusu toplantısındasınız ve Umbridge'in Engizisyon Heyeti kapıya dayandı. Ne yaparsın?",
+    "options": [
+      { "text": "Kapıyı asamla kilitleyip arkadan tüm öğrencilerin gizli bacadan güvenle tahliye olmasını sağlarım.", "house": "Hufflepuff" },
+      { "text": "Asamı çekip kapıyı kırarak girenlerin tam karşısına dikilir, yakalanmayı göze alarak kavgayı başlatırım.", "house": "Gryffindor" },
+      { "text": "Hemen odadaki sihirli parşömenleri yakar, kanıtları yok eder ve hiçbir suç bağı kalmayacak bir bahane üretirim.", "house": "Slytherin" },
+      { "text": "Odadaki iksir buharını havalandırmaya yönlendirip görüşü sıfırlayarak mantıksal bir kaçış koridoru açarım.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 20,
+    "q": "Hogwarts Savaşı başlamak üzere. Şatonun etrafındaki kalkanlar çöktü ve kapılar zorlanıyor. Kalbinden geçen ilk düşünce?",
+    "options": [
+      { "text": "Burada son nefesime kadar savaşacağım; korkup kaçmak asla bir seçenek değil!", "house": "Gryffindor" },
+      { "text": "Şatonun antik savunma rünlerini ve heykellerini aktif hale getirecek en etkili stratejik planı çizmeliyiz.", "house": "Ravenclaw" },
+      { "text": "Yanındaki arkadaşına bakıp 'Ne olursa olsun birbirimizi bırakmayacağız' demek.", "house": "Hufflepuff" },
+      { "text": "Kazanmak için kuralların bir önemi yok; bu savaştan sağ ve en güçlü taraf olarak çıkmalıyım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 21,
+    "q": "Sırlar Odası'nın açıldığı söylentisi yayıldı ve duvarda kanla yazılmış bir yazı belirdi. Koridorda yalnızsın. Ne yaparsın?",
+    "options": [
+      { "text": "Yazının yazıldığı açıyı ve yerdeki su birikintisini inceleyip canavarın hangi borudan geçtiğini tespit etmeye çalışırım.", "house": "Ravenclaw" },
+      { "text": "Hemen en yakın sınıflara koşup henüz koridordan haberi olmayan öğrencileri ortak salona yönlendiririm.", "house": "Hufflepuff" },
+      { "text": "Asamı çekip karanlık köşelere doğru yürürüm; canavar ne olursa olsun onunla ilk ben yüzleşeceğim.", "house": "Gryffindor" },
+      { "text": "Olay yerinde yakalanıp suçun üstüme kalmaması için hızla iz bırakmadan zindanlara doğru kaybolurum.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 22,
+    "q": "Şamarcı Söğüt'ün dalları çılgınca sallanırken bir arkadaşının önemli bir eşyası ağacın köklerine düştü. Ne yaparsın?",
+    "options": [
+      { "text": "Dalların savrulma ritmini ve periyodik vuruş aralıklarını hesaplar, tam kör noktayı belirleyip adım atarım.", "house": "Ravenclaw" },
+      { "text": "Arkadaşımın üzülmesine dayanamam; ağacın altına kendim dalar, darbe alma riskini seve seve göze alırım.", "house": "Hufflepuff" },
+      { "text": "Ağacın en sert dalına kafa tutar, bir süpürgeyle hızla pike yaparak eşyayı daldan kapmayı denerim.", "house": "Gryffindor" },
+      { "text": "Ağacın gizli bir düğmesi olup olmadığını bilip bilmediğini birilerinden öğrenmeye çalışır, boş yere riske girmem.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 23,
+    "q": "Gringotts'taki bir kasada Ejderha ile karşılaştınız ve kapılar mühürlendi. Çıkış yolu yok gibi görünüyor. Kararın?",
+    "options": [
+      { "text": "Zincirleri çözecek büyüyü yapıp ejderhanın sırtına atlamayı öneririm; en tehlikeli ama tek kurtuluş yolu budur!", "house": "Gryffindor" },
+      { "text": "Ejderhanın görme açısını ve nefes aralıklarını inceler, koridorun tavanını zayıf noktadan patlatıp kaçış boşluğu açarım.", "house": "Ravenclaw" },
+      { "text": "Yaralanan cinleri ve arkadaşlarımı geride bırakmam; ne yapacaksak hep birlikte yapmak için herkesi toplarım.", "house": "Hufflepuff" },
+      { "text": "Ejderhanın dikkatini kasanın derinliklerindeki diğer altınlara çekecek bir yem fırlatır, oluşan kaosla sıvışırım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 24,
+    "q": "Zaman Döndürücü (Time-Turner) eline geçti. Geçmişe dönüp sadece bir şeyi değiştirme hakkın var. Hangi tercihi yaparsın?",
+    "options": [
+      { "text": "Geçmişte işlenen büyük bir haksızlığı veya suçsuz birinin hapsedilmesini engellemek için doğrudan olaya müdahale ederim.", "house": "Gryffindor" },
+      { "text": "Tarihi değiştirmenin zaman çizgisi paradokslarını hesaplar, bu gücü sadece kaçırdığım nadir dersleri öğrenmek için kullanırım.", "house": "Ravenclaw" },
+      { "text": "Bir dostumun yaşadığı büyük bir kalp kırıklığını veya yalnız kaldığı o zor günü düzeltmek için yanına giderim.", "house": "Hufflepuff" },
+      { "text": "Kendi geçmişimdeki büyük bir hatayı düzeltip bugünkü konumumu ve gücümü iki katına çıkaracak adımı atarım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 25,
+    "q": "Üçbüyücü Labirenti'ndeki son düzlükte devasa bir Sfenks yolunu kesti ve sana bir bilmece sordu. Ne yaparsın?",
+    "options": [
+      { "text": "Bilmecenin kelime oyunlarını ve semantik ipuçlarını zihnimde parçalara bölüp hatasız cevabı bulurum.", "house": "Ravenclaw" },
+      { "text": "Bilmeceden korkmam; cevaptan emin olmasam bile tereddüt etmeden aklıma gelen ilk cesur tahmini söylerim.", "house": "Gryffindor" },
+      { "text": "Sfenks ile saygılı ve sabırlı bir iletişim kurar, soruyu bir kez daha tekrarlamasını rica ederek dikkatle dinlerim.", "house": "Hufflepuff" },
+      { "text": "Cevabı düşünürken bir yandan da Sfenks'in etrafından dolanabilecek gizli bir patika olup olmadığını kollarım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 26,
+    "q": "Dumbledore'un Anı Tası'na (Pensieve) baktığında okulun kurucularına ait çok gizli bir gerçeği gördün. Ne hissedersin?",
+    "options": [
+      { "text": "Tarihin perde arkasını ve bu sırrın modern sihir teorilerini nasıl değiştireceğini derinlemesine analiz ederim.", "house": "Ravenclaw" },
+      { "text": "Bu bilginin bugünkü bina dengelerini nasıl sarsacağını ve bana ne tür bir nüfuz sağlayacağını hesaplarım.", "house": "Slytherin" },
+      { "text": "Geçmişteki bu kadim mücadelenin bana cesaret verdiğini hisseder, doğru bildiğim yolda yürümeye devam ederim.", "house": "Gryffindor" },
+      { "text": "Binaların ayrışmak yerine birbirine ne kadar muhtaç olduğunu anlayıp tüm binalarla dostluğu güçlendirmek isterim.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 27,
+    "q": "Malfoy Malikanesi'nde kilitli kaldınız ve asalarınız elinizden alındı. Kaçmak için neye güvenirsin?",
+    "options": [
+      { "text": "Gözümü karartıp gardiyanın üzerine atılır, çıplak ellerimle asamı geri almak için kavgayı başlatırım.", "house": "Gryffindor" },
+      { "text": "Zindandaki diğer mahkumlarla kenetlenir, ev cini veya başka bir dostun geleceğine inanarak moralimizi dik tutarız.", "house": "Hufflepuff" },
+      { "text": "Hücredeki nem oranını, duvar çatlaklarını ve asassız yapılabilecek akustik büyü rezonanslarını incelerim.", "house": "Ravenclaw" },
+      { "text": "Ölüm Yiyenlerin kendi aralarındaki kıskançlıkları kullanarak onları birbirine düşürecek bir yalan kurgularım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 28,
+    "q": "Hogwarts koridorlarında gecenin bir yarısı Peeves tam önünde belirdi ve gürültü yapıp Filch'i çağırmakla tehdit ediyor. Ne yaparsın?",
+    "options": [
+      { "text": "Peeves'in dikkatini başka bir kattaki daha büyük bir şakaya veya karmaşaya çekerek onu oraya yönlendiririm.", "house": "Slytherin" },
+      { "text": "Gürültü yaparsa yapsın; korkup kaçmam, Filch gelirse cezam neyse mertçe yüzleşirim.", "house": "Gryffindor" },
+      { "text": "Peeves'e sakin ve nazik bir dille yaklaşır, gününün nasıl geçtiğini sorarak onu şaşırtıp yatıştırmayı denerim.", "house": "Hufflepuff" },
+      { "text": "Poltergeist'lerin fiziksel dünyayla etkileşim kurallarını hatırlayıp onu susturacak doğru formülü fısıldarım.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 29,
+    "q": "Görünmez Şöhret Otu (Dirigawl tüyü) içeren çok nadir bir iksir hazırlıyorsun. Malzeme elinde sadece bir tane var. Ne yaparsın?",
+    "options": [
+      { "text": "Tüm kimyasal reaksiyonları ve sıcaklık eğrilerini kağıda döker, hata payını sıfırlamadan tüyü kazana atmam.", "house": "Ravenclaw" },
+      { "text": "Sabırla kazanın başında saatlerce bekler, iksirin doğru renge dönmesi için gereken tüm emeği sessizce veririm.", "house": "Hufflepuff" },
+      { "text": "İçgüdülerime güvenir, doğru anda cesur bir bilek hareketiyle tüyü kazana bırakır ve sonuca meydan okurum.", "house": "Gryffindor" },
+      { "text": "İksirin mükemmel olması için başka bir masadan gerekirse en kaliteli yardımcı malzemeyi gizlice temin ederim.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 30,
+    "q": "Bakanlıkta Sahte Madalyon'u (Horkruk) Umbridge'in boynundan çalmak için sızdınız. En kritik anda kargaşa çıktı. Ne yaparsın?",
+    "options": [
+      { "text": "Doğrudan Umbridge'in odasına dalar, Sersemlet büyüsüyle madalyonu boynundan çekip alırım.", "house": "Gryffindor" },
+      { "text": "Bakanlık çalışanlarının tahliyesini sağlar, mahkeme salonunda haksız yere yargılanan masumları kurtarırım.", "house": "Hufflepuff" },
+      { "text": "Asansörlerin sihirli mekanizmasını kilitleyerek peşimizdekileri mantıksal bir tuzağa düşürürüm.", "house": "Ravenclaw" },
+      { "text": "Kendi kimliğimi gizleyecek bir kılık değiştirme büyüsü yapıp madalyonla birlikte kalabalığa karışırım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 31,
+    "q": "Gringotts'ta Hırsızın Düşüşü (Thief's Downfall) şelalesinden geçtiniz ve tüm sahte kılıklarınız döküldü. Muhafızlar geliyor!",
+    "options": [
+      { "text": "Asamı çekip muhafızların tam karşısına dikilir, arkadaşlarımın toparlanması için zaman kazandırırım.", "house": "Gryffindor" },
+      { "text": "Rayların eğimini ve vagonların fren mekanizmasını hesaplayıp hızla bir kaçış rotası çizerim.", "house": "Ravenclaw" },
+      { "text": "Yere düşen arkadaşımın elinden tutup onu ayağa kaldırır, ne olursa olsun yanından ayrılmam.", "house": "Hufflepuff" },
+      { "text": "Muhafız cinlerin rüşvet veya şantaj zaaflarını kullanacak hızlı bir psikolojik blöf denerim.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 32,
+    "q": "Gilderoy Lockhart senin ve arkadaşının hafızasını silmek için asasını kaldırdı. O anda ne yaparsın?",
+    "options": [
+      { "text": "Asanın çatlak olduğunu anında fark eder, büyünün geri tepeceğini hesaplayıp arkadaşımı yere çekerim.", "house": "Ravenclaw" },
+      { "text": "Hiç düşünmeden Lockhart'ın üstüne çullanır, asayı elinden almak için fiziksel bir kavgaya girerim.", "house": "Gryffindor" },
+      { "text": "Arkadaşımın önüne siper olur, onun anılarını kaybetmesindense kendi hafızamı riske atarım.", "house": "Hufflepuff" },
+      { "text": "Lockhart'a çok daha büyük bir şöhret vadeden bir hikaye uydurup onu bir anlık tereddüde düşürürüm.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 33,
+    "q": "Noel Balosu için hazırlanıyorsun ama seni baloya davet etmek isteyen kimse olmadı. Tavrın ne olur?",
+    "options": [
+      { "text": "Duruma hiç üzülmem; ortak salonda arkadaşlarımla oturup eğlenceli bir çalışma grubu kurarım.", "house": "Ravenclaw" },
+      { "text": "Tek başına gitmekten zerre çekinmem; en parlak cübbemi giyer, salona başım dik girerim.", "house": "Gryffindor" },
+      { "text": "Kendisi de eş bulamamış çekingen bir arkadaşımın yanına gider, ona eşlik etmeyi teklif ederim.", "house": "Hufflepuff" },
+      { "text": "Okulun en popüler ve etkili simalarından birinin dikkatini çekecek zekice bir ortam hazırlarım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 34,
+    "q": "Weasley Büyücü Şakaları dükkanında satılan 'Kanamalı Nugat' gibi bir ürünü okulda ilk sen test edeceksin. Kararın?",
+    "options": [
+      { "text": "Etkilerini, süresini ve kimyasal bileşenlerini bir parşömene titizlikle not alıp gözlemlerim.", "house": "Ravenclaw" },
+      { "text": "Zor bir sınavdan veya sıkıcı bir dersten kaytarmak için stratejik bir koz olarak saklarım.", "house": "Slytherin" },
+      { "text": "Arkadaşlarıma cesaretimi göstermek için hemen orada hiç çekinmeden ağzıma atarım.", "house": "Gryffindor" },
+      { "text": "Ürünün kimseye zarar vermeyeceğinden emin olmak için önce güvenliğini sorgularım.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 35,
+    "q": "Ravenclaw Kulesi'nin kapısındaki bronz kartal sana: 'Hangi şey her şeyi yutar ama asla doymaz?' diye sordu. Nasıl yaklaşırsın?",
+    "options": [
+      { "text": "Felsefi kavramları ve metaforları zihnimde yarıştırarak 'Zaman' kavramına mantıksal bir açıklamayla ulaşırım.", "house": "Ravenclaw" },
+      { "text": "Kapıyı zorlamak yerine kapıda bekleyen diğer öğrencilerle birlikte cevabı tartışmaya başlarım.", "house": "Hufflepuff" },
+      { "text": "Bilmeceleri sevmem ama kapının önünde saatlerce pes etmeden aklıma gelen her şeyi denerim.", "house": "Gryffindor" },
+      { "text": "Daha önce bu soruyu duymuş bir üst sınıftan cevabı kapmak için kuledeki tanıdıklarımı ararım.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 36,
+    "q": "Hogsmeade'deki Domuz Kafası hanında gizli bir toplantı yapacaksınız ama ortam tekinsiz. Ne yaparsın?",
+    "options": [
+      { "text": "Kapıya en yakın masaya oturur, han sahibinin ve müşterilerin her hareketini gizlice gözlemlerim.", "house": "Slytherin" },
+      { "text": "Ortamın pisliğine aldırmadan arkadaşlarıma sıcak davranır, herkesin rahat hissetmesini sağlarım.", "house": "Hufflepuff" },
+      { "text": "Korkacak hiçbir şeyimiz olmadığını göstermek için göğsümü gere gere odanın ortasına geçerim.", "house": "Gryffindor" },
+      { "text": "Hanın mimari yapısını inceler, olası bir baskında kullanabileceğimiz arka çıkışları tespit ederim.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 37,
+    "q": "Astronomi dersinde gece yarısı teleskopla gökyüzünü tararken Centaurların (At-Adamlar) yasak bir ritüelini gördün. Ne yaparsın?",
+    "options": [
+      { "text": "Gezegenlerin hizalanmasını ve Mars'ın konumunu kaydedip Centaur astrolojisini anlamaya çalışırım.", "house": "Ravenclaw" },
+      { "text": "Bu bilginin ormandaki güç dengelerini nasıl etkileyeceğini tartıp kendime bir müttefik ararım.", "house": "Slytherin" },
+      { "text": "Centaurların kutsal alanına saygı duyar, onları gözetlemeyi bırakıp teleskobumu başka yöne çeviririm.", "house": "Hufflepuff" },
+      { "text": "Merakıma yenik düşer, ritüeli daha yakından görmek için kule merdivenlerinden ormana doğru inerim.", "house": "Gryffindor" }
+    ]
+  },
+  {
+    "id": 38,
+    "q": "Kehanet dersinde Profesör Trelawney aniden transa geçti ve kulağına seninle ilgili karanlık bir kehanet fısıldadı. Tepkin?",
+    "options": [
+      { "text": "Kaderimi başkalarının sözlerine teslim etmem; kehanet ne derse desin kendi yolumu cesaretimle çizerim.", "house": "Gryffindor" },
+      { "text": "Kehanetin tarihsel gerçeklik payını ve Trelawney'nin önceki kehanetlerinin istatistiğini araştırırım.", "house": "Ravenclaw" },
+      { "text": "Bu kehaneti kendi hedeflerime ulaşmak için insanları yönlendirebileceğim bir avantaja çeviririm.", "house": "Slytherin" },
+      { "text": "Korksam bile arkadaşlarıma sarılır, sevginin ve dostluğun her türlü kehanetten güçlü olduğuna inanırım.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 39,
+    "q": "Cadılar Bayramı ziyafetinde Quirrell salona dalıp 'Zindanda İfrit var!' diye bağırdı. İlk hareketin?",
+    "options": [
+      { "text": "Zindanda veya tuvalette tek başına kalmış olabilecek öğrencileri hatırlayıp hemen onları aramaya koşarım.", "house": "Gryffindor" },
+      { "text": "İfritlerin fiziksel dayanıklılığını ve beyin kapasitesini düşünüp onu alt edecek büyüyü hatırlarım.", "house": "Ravenclaw" },
+      { "text": "Panikleyen birinci sınıfları etrafıma toplar, bina başkanının talimatıyla güvenle yatakhaneye götürürüm.", "house": "Hufflepuff" },
+      { "text": "Bu kargaşayı fırsat bilip okulda normalde girilemeyen yasak bir odaya gizlice sızmayı düşünürüm.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 40,
+    "q": "Ollivanders dükkanındasın. Asa seni seçmek üzere tezgahta titriyor. Hangi asa çekirdeği sana daha yakın hissettirir?",
+    "options": [
+      { "text": "Anka Kuşu Tüyü; çünkü bağımsız, cesur ve en imkansız anlarda alev alabilen bir gücü temsil eder.", "house": "Gryffindor" },
+      { "text": "Ejderha Yürek Kirişi; çünkü muazzam bir güç üretir ve sahibinin hırslarına en hızlı yanıtı verir.", "house": "Slytherin" },
+      { "text": "Tekboynuz Kılı; çünkü en tutarlı, sadık ve sahibini asla karanlığa satmayan bir saflığa sahiptir.", "house": "Hufflepuff" },
+      { "text": "Esnek ve ince işlenmiş bir Ceviz ağacı; çünkü karmaşık mantık ve büyü formüllerini kusursuz iletir.", "house": "Ravenclaw" }
+    ]
+  },
+  {
+    "id": 41,
+    "q": "Slughorn'un Akşam Yemeği Kulübü'ne (Slug Club) davet edildin. Orada nasıl bir izlenim bırakmak istersin?",
+    "options": [
+      { "text": "Sihir Bakanı ve güçlü ailelerle bağlantı kurup gelecekteki kariyerim için sağlam köprüler atarım.", "house": "Slytherin" },
+      { "text": "Yapay nezaketlerle uğraşmam; olduğum gibi davranır, yapmacık sohbetlerden uzak dururum.", "house": "Gryffindor" },
+      { "text": "Sihir dünyasındaki en karmaşık büyü teorileri hakkında derin ve hayranlık uyandırıcı bir fikir sunarım.", "house": "Ravenclaw" },
+      { "text": "Herkesle samimi ve içten sohbetler eder, ortamda çekingen duran birine eşlik ederim.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 42,
+    "q": "Mürver Asa'nın senin elinde olduğunu fark ettin. Dünyanın en güçlü asası. Onunla ilk ne yaparsın?",
+    "options": [
+      { "text": "Tarihteki tüm kırık büyülü nesneleri ve çözülememiş büyü felaketlerini onarmak için kullanırım.", "house": "Ravenclaw" },
+      { "text": "Bu gücün kimseye zarar vermemesi ve kan dökülmemesi için onu güvenli ve gizli bir yere gömerim.", "house": "Hufflepuff" },
+      { "text": "Kimsenin bana veya sevdiklerime boyun eğdiremeyeceği mutlak bir düzen ve otorite kurarım.", "house": "Slytherin" },
+      { "text": "Karanlık güçlerin karşısına dikilip onları tamamen yok etmek için bu asayla ön saflarda savaşırım.", "house": "Gryffindor" }
+    ]
+  },
+  {
+    "id": 43,
+    "q": "Hogsmeade'deki Üç Süpürge hanında otururken yan masadaki Bakanlık yetkilisinin gizli bir planı fısıldadığını duydun. Ne yaparsın?",
+    "options": [
+      { "text": "Konuşulanların arka planındaki yasal boşlukları zihnimde tartar, bilginin doğruluğunu teyit ederim.", "house": "Ravenclaw" },
+      { "text": "Bu bilgiyi hemen cebime koyar; kime, ne zaman ve ne karşılığında satabileceğimi düşünürüm.", "house": "Slytherin" },
+      { "text": "Eğer bu plan masum insanlara zarar verecekse hemen ayağa kalkıp hesap sormak isterim.", "house": "Gryffindor" },
+      { "text": "Bu plandan etkilenebilecek dostlarımı hemen uyarır, onları koruma altına almak için harekete geçerim.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 44,
+    "q": "Godric's Hollow'daki eski mezarlıkta Bathilda Bagshot kılığına girmiş Nagini ile karşılaştın. Hamlen?",
+    "options": [
+      { "text": "Yılanın zehir menzilini ve refleks hızını hesaplayıp en dar açıyla kenara sıçrarım.", "house": "Ravenclaw" },
+      { "text": "Korkuyla geri çekilmek yerine asamı bir kılıç gibi öne savurur, canavarla göğüs göğüse çarpışırım.", "house": "Gryffindor" },
+      { "text": "Odadaki ağır bir eşyayı yılanın üzerine yıkarak dikkatini dağıtır, en yakın pencereden dışarı atlarım.", "house": "Slytherin" },
+      { "text": "Yanındaki arkadaşımı canavardan uzaklaştırmak için onu arkama çeker, kalkan büyüsünü kurarım.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 45,
+    "q": "Hogwarts Kütüphanesi'nin Yasak Bölümü'ne girmek için Madam Pince'ten izin koparman gerekiyor. Nasıl ikna edersin?",
+    "options": [
+      { "text": "Kütüphane kurallarını ve kitap koruma yönergelerini ne kadar iyi bildiğimi kanıtlayarak akademik izin alırım.", "house": "Ravenclaw" },
+      { "text": "Madam Pince'e günlerce kütüphaneyi düzenlemesinde gönüllü yardım eder, emeğimle güvenini kazanırım.", "house": "Hufflepuff" },
+      { "text": "Bir profesörün sahte imzasını taklit eder veya onu ikna edecek kurnaz bir gerekçe sunarım.", "house": "Slytherin" },
+      { "text": "İzin alamayacağımı bilirsem gece pelerini takıp içeri sızma cesaretini gösteririm.", "house": "Gryffindor" }
+    ]
+  },
+  {
+    "id": 46,
+    "q": "Karanlık bir zindanda kilitli kaldın ve kapıdaki kilit sadece bir yılan diliyle (Çataldil) açılıyor. Ne yaparsın?",
+    "options": [
+      { "text": "Daha önce duyduğum tıslama seslerinin fonetiğini taklit etmeye çalışarak mantıksal bir ses üretirim.", "house": "Ravenclaw" },
+      { "text": "Çataldil konuşmayı denerim; bu yetenek karanlık kabul edilse bile hedefe ulaşmak için onu kullanırım.", "house": "Slytherin" },
+      { "text": "Kapıyı kırmak için en güçlü patlatma büyülerimi ardı ardına dener, pes etmem.", "house": "Gryffindor" },
+      { "text": "Duvarlara vurarak dışarıdaki dostlarıma mors alfabesiyle sinyal gönderir, yardımı beklerim.", "house": "Hufflepuff" }
+    ]
+  },
+  {
+    "id": 47,
+    "q": "Quidditch Dünya Kupası çadır alanında Ölüm Yiyenler gökyüzüne Karanlık İşaret'i (Morsmordre) fırlattı. Ne yaparsın?",
+    "options": [
+      { "text": "Karanlık İşaret'in büyülü yapısını ve hangi asadan çıktığını anlamak için izleri incelerim.", "house": "Ravenclaw" },
+      { "text": "Panikle kaçışan büyücü ailelerin çocuklarını toplayıp ormanın güvenli derinliklerine götürürüm.", "house": "Hufflepuff" },
+      { "text": "Asamı çekip gökyüzündeki işaretin atıldığı çalılıklara doğru cesurca koşarım.", "house": "Gryffindor" },
+      { "text": "Bakanlık görevlileri gelmeden önce kendimi ve ailemi en güvenli sığınağa çekerim.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 48,
+    "q": "Hogwarts Şatosu'ndaki bir zırh takımı canlandı ve sana yolu kapatıp bir şövalye yemini etmeni istedi. Ne dersin?",
+    "options": [
+      { "text": "'Zayıfları koruyacağıma, haksızlığa karşı asilce savaşacağıma ve asla kaçmayacağıma ant içerim!'", "house": "Gryffindor" },
+      { "text": "'Doğruluktan, emekten, adaletten ve dostlarıma sadakatten asla sapmayacağıma ant içerim!'", "house": "Hufflepuff" },
+      { "text": "'Aklın ve bilginin ışığında gerçeği arayacağıma ve cehaletle savaşacağıma ant içerim!'", "house": "Ravenclaw" },
+      { "text": "'Kendi kaderimi kendi ellerimle yazacağıma ve zirveye ulaşmak için gerekeni yapacağıma ant içerim!'", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 49,
+    "q": "Kral Çaprazı İstasyonu'nda 9 ¾ peronuna ilk kez koşacaksın ama tuğla duvar çok sert görünüyor. İçindeki duygu?",
+    "options": [
+      { "text": "Duvarın sihirli moleküler geçirgenliğini düşünüp kendimi fiziksel olarak hazırlarım.", "house": "Ravenclaw" },
+      { "text": "Gözlerimi kapatır, arabamı son hızla duvara doğru sürerim; korkunun beni durdurmasına izin vermem!", "house": "Gryffindor" },
+      { "text": "Etrafımdaki diğer ailelerin nasıl geçtiğini izler, gerekirse nazikçe yardım isterim.", "house": "Hufflepuff" },
+      { "text": "Muggle'ların beni izlemediğinden emin olur, en zarif ve dikkat çekmeyen anda içeri süzülürüm.", "house": "Slytherin" }
+    ]
+  },
+  {
+    "id": 50,
+    "q": "Seçmen Şapka başına kondu ve kulağına fısıldadı: 'İçinde büyük potansiyeller görüyorum... Seni nereye koysam?' Ona cevabın ne olurdu?",
+    "options": [
+      { "text": "'Beni zekamı sınayabileceğim, bilginin sınırlarını zorlayabileceğim insanların yanına koy!'", "house": "Ravenclaw" },
+      { "text": "'Beni büyük hedeflerime ulaşabileceğim, liderlik vasıflarımı gösterebileceğim yere gönder!'", "house": "Slytherin" },
+      { "text": "'Beni cesaretimi gösterebileceğim, adaletsizliğe karşı korkusuzca savaşabileceğim kuleye yolla!'", "house": "Gryffindor" },
+      { "text": "'Beni dostluğun, vefanın, samimiyetin ve emeğin en çok değer gördüğü yuvaya yerleştir!'", "house": "Hufflepuff" }
+    ]
+  }
+]
