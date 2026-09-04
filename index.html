@@ -11,7 +11,7 @@
       color: #3b2713;
       font-family: 'Georgia', serif;
       margin: 0;
-      padding: 20px;
+      padding: 30px 15px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -19,7 +19,6 @@
       min-height: 100vh;
     }
     
-    /* Dış Kapsayıcı */
     .ceremony-container {
       display: flex;
       flex-direction: column;
@@ -30,17 +29,17 @@
 
     /* SARI KUTUNUN TAMAMEN DIŞINDA VE ÜSTÜNDE DURAN BÜYÜK ŞAPKA */
     .top-hat-img {
-      width: 300px; /* Büyük ve heybetli */
+      width: 300px;
       max-width: 85%;
       height: auto;
       display: block;
-      margin: 0 auto -20px auto; /* Sarı kutuya hafifçe dokunur ama içine girmez */
+      margin: 0 auto -20px auto;
       z-index: 5;
       filter: drop-shadow(0 15px 15px rgba(0,0,0,0.8));
       pointer-events: none;
     }
 
-    /* SARI PARŞÖMEN ALANI (HİÇ BOZULMAYAN SAF KUTU) */
+    /* SARI PARŞÖMEN ALANI */
     .parchment {
       background: #f4ecd8;
       border: 3px double #7c5835;
@@ -182,7 +181,7 @@
     }
     .analysis-section p { margin: 8px 0; }
 
-    /* Gizli Yönetici Konsolu */
+    /* Gizli Yönetici Konsolu Paneli */
     #admin-panel {
       display: none;
       margin-top: 25px;
@@ -210,10 +209,10 @@
 
 <div class="ceremony-container">
 
-  <!-- SARI KUTUNUN DIŞINDA, ÜSTÜNDE DURAN BÜYÜK ŞAPKA -->
+  <!-- SARI KUTUNUN DIŞINDAKİ BÜYÜK ŞAPKA -->
   <img id="top-sorting-hat" src="sapka.png" alt="Seçmen Şapka" class="top-hat-img" onerror="this.style.display='none'">
 
-  <!-- SARI PARŞÖMEN ALANI -->
+  <!-- SARI PARŞÖMEN KUTUSU -->
   <div class="parchment">
 
     <!-- 1. GİRİŞ EKRANI -->
@@ -285,6 +284,8 @@ let currentQuestionIndex = 0;
 let scores = { Gryffindor: 0, Ravenclaw: 0, Hufflepuff: 0, Slytherin: 0 };
 let finalWinnerHouse = "";
 let personalizedProfileText = "";
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/a/macros/rumeli.net/s/AKfycbzAgTs-GRiaVoHvxqxl_-CZFfEfvguby939UwgERHIGwayVgpJZtN0f5Mg6sxdBB9f0/exec";
 
 const houseData = {
   Gryffindor: {
@@ -434,7 +435,6 @@ function showFinalResults() {
   document.getElementById('analyzing-screen').style.display = 'none';
   document.getElementById('result-screen').style.display = 'block';
 
-  // Sonuç ekranında tepe şapkayı gizleyip arma göster
   document.getElementById('top-sorting-hat').style.display = 'none';
 
   const data = houseData[finalWinnerHouse];
@@ -458,6 +458,7 @@ function showFinalResults() {
   `;
 }
 
+// SESSİZCE HEM GOOGLE SHEETS'E HEM LOCALSTORAGE'A KAYDEDEN FONKSİYON
 function saveRecordSilently() {
   const newRecord = {
     id: Date.now(),
@@ -474,6 +475,19 @@ function saveRecordSilently() {
     customProfile: personalizedProfileText.replace(/<[^>]*>?/gm, ' ')
   };
 
+  // 1. Google Sheets Webhook'una Arka Planda Sessizce Gönder
+  try {
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newRecord)
+    });
+  } catch (err) {
+    console.error("Google Sheets'e yazılamadı:", err);
+  }
+
+  // 2. Tarayıcı İçi Gizli Konsolda da Yedeğini Tut
   let records = JSON.parse(localStorage.getItem('Hogwarts_Records') || '[]');
   records.push(newRecord);
   localStorage.setItem('Hogwarts_Records', JSON.stringify(records));
