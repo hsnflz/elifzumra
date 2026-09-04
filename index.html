@@ -11,46 +11,65 @@
       color: #3b2713;
       font-family: 'Georgia', serif;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
+    
+    /* Ana Kart / Parşömen Kapsayıcısı */
+    .wrapper {
+      position: relative;
+      max-width: 680px;
+      width: 100%;
+      margin-top: 100px; /* Büyük şapka için üstten pay */
+    }
+
+    /* Sarı Alanın Üstüne Binen Dev Şapka */
+    .floating-hat {
+      position: absolute;
+      top: -125px; /* Sarı kutunun üstüne taşırır */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 240px; /* Çok daha büyük ve görkemli */
+      height: auto;
+      z-index: 10;
+      mix-blend-mode: multiply; /* Damalı arka planı yok edip deriyi parşömene kaynaştırır */
+      filter: drop-shadow(0 15px 20px rgba(0,0,0,0.6));
+      pointer-events: none;
+    }
+
     .parchment {
       background: #f4ecd8;
       border: 3px double #7c5835;
       box-shadow: 0 0 25px rgba(0,0,0,0.8), inset 0 0 40px rgba(160,120,70,0.25);
       border-radius: 12px;
-      max-width: 680px;
       width: 100%;
-      padding: 35px 30px;
+      padding: 100px 35px 35px; /* Şapkanın altında kalan üst kısım için boşluk */
       position: relative;
       text-align: center;
     }
+
     h1 {
-      font-size: 26px;
+      font-size: 27px;
       color: #4a2810;
-      margin-top: 10px;
+      margin-top: 0;
       border-bottom: 2px dashed #ab8965;
       padding-bottom: 12px;
       letter-spacing: 1px;
     }
-    .hat-img {
-      width: 120px;
-      height: auto;
-      margin: 0 auto 10px;
-      display: block;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
-    }
+
     .crest-img {
-      width: 130px;
+      width: 150px;
       height: auto;
       margin: 10px auto;
       display: block;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+      mix-blend-mode: multiply;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
     }
+
     .input-group { margin: 25px 0; }
     input[type="text"] {
       width: 80%;
@@ -65,6 +84,7 @@
       outline: none;
       text-align: center;
     }
+
     .main-btn {
       padding: 12px 28px;
       background: #4a2810;
@@ -78,7 +98,7 @@
     }
     .main-btn:hover { background: #2b1506; }
 
-    /* Soru Ekranı */
+    /* Soru Ekranı Ayarları */
     .header-info {
       display: flex;
       justify-content: space-between;
@@ -118,7 +138,7 @@
 
     /* Sayaç */
     .countdown-number {
-      font-size: 48px;
+      font-size: 52px;
       font-weight: bold;
       color: #7c2d12;
       margin: 15px 0;
@@ -129,7 +149,7 @@
       to { transform: scale(1.15); }
     }
 
-    /* Sonuç */
+    /* Sonuç Ekranı */
     .house-title {
       font-size: 32px;
       font-weight: bold;
@@ -162,7 +182,7 @@
     }
     .analysis-section p { margin: 8px 0; }
 
-    /* Gizli Yönetici Konsolu Paneli */
+    /* Gizli Yönetici Konsolu */
     #admin-panel {
       display: none;
       margin-top: 25px;
@@ -188,59 +208,62 @@
 </head>
 <body>
 
-<div class="parchment">
+<div class="wrapper">
 
-  <!-- 1. GİRİŞ EKRANI -->
-  <div id="welcome-screen">
-    <img src="sapka.png" alt="Seçmen Şapka" class="hat-img" onerror="this.style.display='none'">
-    <h1>Hogwarts Seçmen Şapka Töreni</h1>
-    <p>Büyük Salon'a hoş geldin genç büyücü. Şapka zihnini tartmadan önce adını bilmeli...</p>
-    <div class="input-group">
-      <input type="text" id="student-name" placeholder="Adınızı yazın..." autocomplete="off">
-    </div>
-    <button class="main-btn" onclick="startCeremony()">Törene Katıl</button>
-  </div>
+  <!-- SARI ALANIN ÜSTÜNDEN TAŞAN BÜYÜK ŞAPKA -->
+  <img id="top-floating-hat" src="sapka.png" alt="Seçmen Şapka" class="floating-hat" onerror="this.style.display='none'">
 
-  <!-- 2. SORULAR EKRANI -->
-  <div id="quiz-screen" style="display: none;">
-    <img src="sapka.png" alt="Seçmen Şapka" class="hat-img" style="width: 75px;" onerror="this.style.display='none'">
-    <h1>Hogwarts Seçmen Şapka Seremonisi</h1>
-    <div class="header-info">
-      <span id="student-display">ADAY: </span>
-      <span id="progress-text">Soru: 1 / 7</span>
-    </div>
-    <div class="scenario-text" id="question-text">Sorular yükleniyor...</div>
-    <div id="options-container"></div>
-  </div>
+  <div class="parchment">
 
-  <!-- 3. ANALİZ VE GERİ SAYIM EKRANI -->
-  <div id="analyzing-screen" style="display: none;">
-    <img src="sapka.png" alt="Seçmen Şapka" class="hat-img" onerror="this.style.display='none'">
-    <h1>Zihnin Katmanları İnceleniyor...</h1>
-    <p style="font-style: italic; margin-top: 15px;">"Hımm... Çok derin bir karakter. Hangi köşede parlayacağını görmek kolay değil..."</p>
-    <div class="countdown-number" id="countdown-timer">10</div>
-    <p>Seçmen Şapka kararını mühürlüyor...</p>
-  </div>
-
-  <!-- 4. SONUÇ EKRANI -->
-  <div id="result-screen" style="display: none;">
-    <img id="house-crest" src="" alt="Bina Arması" class="crest-img" onerror="this.style.display='none'">
-    <div class="house-title" id="final-house"></div>
-    <div class="house-motto" id="house-motto"></div>
-
-    <div class="scores-grid" id="scores-display"></div>
-
-    <div class="analysis-section">
-      <strong id="analysis-student-title"></strong>
-      <div id="analysis-text"></div>
+    <!-- 1. GİRİŞ EKRANI -->
+    <div id="welcome-screen">
+      <h1>Hogwarts Seçmen Şapka Töreni</h1>
+      <p>Büyük Salon'a hoş geldin genç büyücü. Şapka zihnini tartmadan önce adını bilmeli...</p>
+      <div class="input-group">
+        <input type="text" id="student-name" placeholder="Adınızı yazın..." autocomplete="off">
+      </div>
+      <button class="main-btn" onclick="startCeremony()">Törene Katıl</button>
     </div>
 
-    <button class="main-btn" style="margin-top: 20px;" onclick="restartAll()">Yeni Bir Seremoni Başlat</button>
-  </div>
+    <!-- 2. SORULAR EKRANI -->
+    <div id="quiz-screen" style="display: none;">
+      <h1>Hogwarts Seçmen Şapka Seremonisi</h1>
+      <div class="header-info">
+        <span id="student-display">Öğrenci: </span>
+        <span id="progress-text">Soru: 1 / 7</span>
+      </div>
+      <div class="scenario-text" id="question-text">Sorular yükleniyor...</div>
+      <div id="options-container"></div>
+    </div>
 
+    <!-- 3. ANALİZ VE GERİ SAYIM EKRANI -->
+    <div id="analyzing-screen" style="display: none;">
+      <h1>Zihnin Katmanları İnceleniyor...</h1>
+      <p style="font-style: italic; margin-top: 15px;">"Hımm... Çok derin bir karakter. Hangi köşede parlayacağını görmek kolay değil..."</p>
+      <div class="countdown-number" id="countdown-timer">10</div>
+      <p>Seçmen Şapka kararını mühürlüyor...</p>
+    </div>
+
+    <!-- 4. SONUÇ EKRANI -->
+    <div id="result-screen" style="display: none;">
+      <img id="house-crest" src="" alt="Bina Arması" class="crest-img" onerror="this.style.display='none'">
+      <div class="house-title" id="final-house"></div>
+      <div class="house-motto" id="house-motto"></div>
+
+      <div class="scores-grid" id="scores-display"></div>
+
+      <div class="analysis-section">
+        <strong id="analysis-student-title"></strong>
+        <div id="analysis-text"></div>
+      </div>
+
+      <button class="main-btn" style="margin-top: 20px;" onclick="restartAll()">Yeni Bir Seremoni Başlat</button>
+    </div>
+
+  </div>
 </div>
 
-<!-- SADECE SİZİN GÖREBİLECEĞİNİZ GİZLİ PANEL -->
+<!-- GİZLİ YÖNETİCİ KONSOLU -->
 <div id="admin-panel">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
     <strong>📜 SESSİZ VERİ ARŞİVİ (YÖNETİCİ GÖRÜNÜMÜ)</strong>
@@ -302,7 +325,7 @@ function startCeremony() {
     return;
   }
   studentName = nameInput;
-  document.getElementById('student-display').innerText = `ADAY: ${studentName}`;
+  document.getElementById('student-display').innerText = `Öğrenci: ${studentName}`;
 
   scores = { Gryffindor: 0, Ravenclaw: 0, Hufflepuff: 0, Slytherin: 0 };
   userAnswers = [];
@@ -410,6 +433,9 @@ function showFinalResults() {
   document.getElementById('analyzing-screen').style.display = 'none';
   document.getElementById('result-screen').style.display = 'block';
 
+  // Sonuç ekranında tepe şapkayı gizleyip bina armasını öne çıkar
+  document.getElementById('top-floating-hat').style.display = 'none';
+
   const data = houseData[finalWinnerHouse];
   const crestEl = document.getElementById('house-crest');
   crestEl.src = data.crest;
@@ -490,7 +516,7 @@ function renderAdminRecords() {
   records.forEach((rec, idx) => {
     html += `
       <div class="admin-entry">
-        <strong>#${idx + 1} | ADAY: ${rec.student}</strong> (${rec.date})<br>
+        <strong>#${idx + 1} | Öğrenci: ${rec.student}</strong> (${rec.date})<br>
         <strong>Kule:</strong> ${rec.winnerHouse} | [G:%${rec.percentages.Gryffindor} R:%${rec.percentages.Ravenclaw} H:%${rec.percentages.Hufflepuff} S:%${rec.percentages.Slytherin}]<br>
         <details style="margin-top:5px; cursor:pointer;">
           <summary>Verdiği Cevapları ve Özel Raporu Gör</summary>
@@ -507,7 +533,7 @@ function renderAdminRecords() {
 }
 
 function clearAdminData() {
-  if (confirm("Tüm kayıtlı aday verileri silinsin mi?")) {
+  if (confirm("Tüm kayıtlı öğrenci verileri silinsin mi?")) {
     localStorage.removeItem('Hogwarts_Records');
     renderAdminRecords();
   }
@@ -515,6 +541,7 @@ function clearAdminData() {
 
 function restartAll() {
   document.getElementById('student-name').value = '';
+  document.getElementById('top-floating-hat').style.display = 'block';
   document.getElementById('result-screen').style.display = 'none';
   document.getElementById('welcome-screen').style.display = 'block';
 }
